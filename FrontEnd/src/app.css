@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  background: #0f0f0f;
+  color: white;
+}
+
+/* Layout */
+.app {
+  display: flex;
+  height: 100%;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+/* Panels */
+.left,
+.right {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* LEFT PANEL */
+.left {
+  background: #1e1e1e;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  background: #2a2a2a;
+  border-bottom: 1px solid #333;
+  font-size: 14px;
+}
+
+.editor-header button {
+  background: #6366f1;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.editor-header button:hover {
+  background: #4f46e5;
+}
+
+/* Editor */
+.code {
+  flex: 1;
+  overflow: auto;
+  padding: 0.5rem;
+}
+
+/* RIGHT PANEL */
+.right {
+  background: #181818;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.review-header {
+  padding: 0.8rem 1rem;
+  background: #2a2a2a;
+  border-bottom: 1px solid #333;
+  font-size: 14px;
+}
+
+.review-content {
+  padding: 1rem;
+  overflow-y: auto;
+  flex: 1;
+  line-height: 1.6;
+}
+
+/* Markdown styling */
+.review-content pre {
+  background: #0d1117;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.review-content code {
+  font-family: "Fira Code", monospace;
+}
+
+.review-content h1,
+.review-content h2,
+.review-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.review-content p {
+  margin-bottom: 0.5rem;
+}
